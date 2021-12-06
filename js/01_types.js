@@ -20,13 +20,14 @@ console.log('symbol: ', typeof Symbol('JS'));
 /**
  Undefined -
  - переменная не была объявлена
- - значение не было объявлено,
+ - переменная объявлена, но значение не было установлено
  - возвращает функция, которая не возвращает ничего
 */
 
 /**
  null -
- - переменная объявлена, но отсутствует значение
+ - преднамеренное отсутствие значения
+ - переменная объявлена, но значение пока установили в null
  - значение было определено ранее, но затем туда записали null
 */
 
@@ -82,6 +83,8 @@ console.log(2 == '2'); //true
 console.log(2 === '2'); //false
 console.log(undefined == null); // true
 console.log(undefined === null); // false
+console.log(null != undefined) //false
+console.log(null!== undefined); // true
 console.log(NaN === null); // false
 console.log('0' == false); //true, тк интерпретатор приводит к числу
 console.log('0' == 0); //true
@@ -96,3 +99,4 @@ console.log('' == {}); // false
 console.log(0 == []); // true
 console.log(0 == {}); // false
 console.log(0 == null); // false
+
