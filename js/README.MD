@@ -9,6 +9,7 @@
 - fetch
 - web sockets
 - глобальные переменные в node.js
+- отличия Node.js и JS в браузере
 - ESMA Script 
 
 по тестам:
