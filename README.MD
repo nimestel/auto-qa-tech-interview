@@ -15,9 +15,8 @@
 - cd/cd
 
 по программированию:
-- ООП 
 - принципы хорошего кода (SOLID, DRY, KISS, YAGNI)
-- паттерны проектирования, их виды, кратко описание и зачем используют
+- паттерны, их виды, кратко описание и зачем используют
 
 по API:
 - методы HTTP
@@ -27,3 +26,8 @@
 - REST/SOAP, OpenApi и Swagger
 
 по SQL:
+
+**другие полезные репозитории по собесам:**
+
+- https://github.com/splashinn/Frontend-Engineering-Coding-Interview-QA
+- https://github.com/Gauthamjm007/Backend-NodeJS-Golang-Interview_QA
