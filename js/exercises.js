@@ -1,3 +1,5 @@
+import { expect } from 'chai';
+
 function fizzbuzz1() {
     console.log('fizzbuzz 1:');
     for (let i = 0; i < 20; i++) {
@@ -209,9 +211,10 @@ function test(set, operation) {
     const res = calc[operation](...set.args);
     console.log(ConsoleColors.white, 'actual result: ', res);
 
-    res === set.result
-        ? console.log(ConsoleColors.green, 'right answer! :)')
-        : console.log(ConsoleColors.red, 'wrong answer! :(');
+    expect(res).to.equal(set.result);
+    // res === set.result
+    //     ? console.log(ConsoleColors.green, 'right answer! :)')
+    //     : console.log(ConsoleColors.red, 'wrong answer! :(');
 }
 
 Object.keys(data).forEach((operation) => {
