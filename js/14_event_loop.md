@@ -44,7 +44,7 @@ Event Loop отдает приоритет стеку вызовов. Снача
 
 Код каждой HTML-страницы в браузере выполняется в Main Thread. Main Thread — это основной поток, где браузер выполняет JS, делает перерисовки, обрабатывает пользовательские действия и многое другое. По сути, это то место, где движок JS интегрирован в браузер.
 
-![Event loop2](screenshots/event_loop2.png "Общее представление")
+![Event loop2](https://github.com/nimestel/auto-qa-tech-interview/blob/master/screenshots/event_loop2.png "Общее представление")
 
 Мы видим, что единственное место, через которое задачи могут попасть в Call Stack и выполниться — это Event Loop.
 
@@ -53,7 +53,7 @@ Event Loop отдает приоритет стеку вызовов. Снача
 выполнился)
 2. Задачи от заказчиков — Render, Microtasks и Tasks
 
-![Event loop3](screenshots/event_loop3.png "Частное представление")
+![Event loop3](https://github.com/nimestel/auto-qa-tech-interview/blob/master/screenshots/event_loop3.png "Частное представление")
 
 После того как мы начали выполнять какой-либо script, в очередь Tasks ставится задача с 
 выполнением этого скрипта. По мере выполнения этого кода, нам встречаются задачи от разных заказчиков, которые ставятся в соответствующие очереди. 
