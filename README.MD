@@ -31,3 +31,8 @@
 
 - https://github.com/splashinn/Frontend-Engineering-Coding-Interview-QA
 - https://github.com/Gauthamjm007/Backend-NodeJS-Golang-Interview_QA
+
+отличный набор вопросов на SDET/QA automation 
+(дальше буду пополнять реп из него):
+
+https://link.medium.com/Y4iBiqeemob
