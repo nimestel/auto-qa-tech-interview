@@ -1,9 +1,8 @@
 **TODO:**
 
 - [x] SOLID
-- DRY
-- KISS
-- YAGNI
-- BDUF
-- APO
+- [x] DRY
+- [x] KISS
+- [x] YAGNI
+- [x] BDUF
 - композиция, наследование
