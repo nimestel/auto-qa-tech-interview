@@ -24,3 +24,17 @@ console.log(name) //Fernando
 console.log(age) //37
 console.log(others) //{country: "Spain", gender: "M"}
 
+// ?. - optional chaining operator
+let a = {};
+
+before:
+a.b.c	// Uncaught TypeError: a.b is undefined
+
+after:
+a?.b	// undefined
+a?.b?.c	// undefined
+a.b	// undefined
+
+// не будет выполнено ничего, если значение undefined или null:
+const func = a?.b?.someFunc?.(data); 
+const smth = func(data);
