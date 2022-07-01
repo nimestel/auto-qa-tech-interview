@@ -73,13 +73,29 @@ function nativeSort() {
     console.log('arr desc sort:', arr);
 }
 
+function countDuplicatedSymbols(str) {
+const arr = str.split('');
+let duplicatedSymbols = [];
+for (let i = 0; i<= arr.length-1; i++) { 
+for (let j = i+1; j<= arr.length; j++) { 
+if (arr[i]===arr[j] && !(checkExistingSymbol(arr[i]))) duplicatedSymbols.push(arr[i])
+}
+}
+console.log(duplicatedSymbols.length);
+console.log(duplicatedSymbols);
+
+function checkExistingSymbol(symbol) { 
+return duplicatedSymbols.includes(symbol);
+}
+}
+
 //fizzbuzz1();
 //fizzbuzz2();
 //invert1();
 //invert2();
 //bubbleSort();
 //nativeSort();
-
+//countDuplicatedSymbols('12q.323.q561');
 
 /** impl calculator and tests */
 
