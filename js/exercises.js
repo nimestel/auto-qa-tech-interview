@@ -74,19 +74,49 @@ function nativeSort() {
 }
 
 function countDuplicatedSymbols(str) {
-const arr = str.split('');
-let duplicatedSymbols = [];
-for (let i = 0; i<= arr.length-1; i++) { 
-for (let j = i+1; j<= arr.length; j++) { 
-if (arr[i]===arr[j] && !(checkExistingSymbol(arr[i]))) duplicatedSymbols.push(arr[i])
-}
-}
-console.log(duplicatedSymbols.length);
-console.log(duplicatedSymbols);
+    const arr = str.split('');
+    let duplicatedSymbols = [];
+    for (let i = 0; i <= arr.length - 1; i++) {
+        for (let j = i + 1; j <= arr.length; j++) {
+            if (arr[i] === arr[j] && !checkExistingSymbol(arr[i])) duplicatedSymbols.push(arr[i]);
+        }
+    }
+    console.log(duplicatedSymbols.length);
+    console.log(duplicatedSymbols);
 
-function checkExistingSymbol(symbol) { 
-return duplicatedSymbols.includes(symbol);
+    function checkExistingSymbol(symbol) {
+        return duplicatedSymbols.includes(symbol);
+    }
 }
+
+function isTicketLucky(ticketNumber) {
+    ticketNumber = String(ticketNumber);
+
+    if (ticketNumber.length !== 6) return false;
+    const numbers = ticketNumber.split('');
+    const [head, tail] = [
+        [numbers[0], numbers[1], numbers[2]],
+        [numbers[3], numbers[4], numbers[5]],
+    ];
+
+    function summ(arr) {
+        try {
+            return arr.reduce((sum, num) => {
+                if (!Number.isInteger(Number(num)))
+                    throw new Error('В номере билета содержится не цифра!');
+                return sum + Number(num);
+            }, 0);
+        } catch (e) {
+            console.log('Произошла ошибка! ', e);
+        }
+    }
+    const headSum = summ(head);
+    const tailSum = summ(tail);
+
+    console.log(head, tail);
+    console.log(headSum, tailSum);
+
+    return headSum === tailSum;
 }
 
 //fizzbuzz1();
@@ -95,7 +125,8 @@ return duplicatedSymbols.includes(symbol);
 //invert2();
 //bubbleSort();
 //nativeSort();
-//countDuplicatedSymbols('12q.323.q561');
+//countDuplicatedSymbols('12q.323.q561'); // 5: 12q.3
+//console.log(isTicketLucky(123006));
 
 /** impl calculator and tests */
 
