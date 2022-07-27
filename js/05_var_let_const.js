@@ -11,10 +11,10 @@ let b = 'variable b';
 
 //Блочная область видимости
 {
-    a = 'local variable a'
+    a = 'local variable a';
     console.log('local scope a:', a); // local variable a
 
-    let b = 'local variable b'
+    let b = 'local variable b';
     console.log('local scope b:', b); // local variable b
 
     // Повторное объявление приведет к ошибке
@@ -28,7 +28,6 @@ let b = 'variable b';
 // Переназначенное внутри блока значение сохраняется
 console.log('global scope a:', a); // local variable a
 console.log('global scope b:', b); // variable b
-
 
 /**
  *  Const
@@ -45,15 +44,15 @@ const port = 8080;
 // Можно менять поля внутри
 const arr = ['one', 'two'];
 // нет ошибки при изменении полей
-arr[0] = 'last'
-arr.push('!')
+arr[0] = 'last';
+arr.push('!');
 console.log(arr); // [ 'last', 'two', '!' ]
 
 const obj = {};
-obj.name = 'Tanya'
+obj.name = 'Tanya';
 console.log(obj); // { name: 'Tanya' }
 
-delete obj.name
+delete obj.name;
 console.log(obj); // {}
 
 //obj = ''; // TypeError: Assignment to constant variable.
@@ -69,6 +68,7 @@ console.log(obj); // {}
  */
 
 // Повторные var игнорируются:
+console.log(user); // undefined
 var user = 'Peter';
 var user; // игнорирует, переменная объявлена раньше, нет ошибки
 console.log(user); // Peter

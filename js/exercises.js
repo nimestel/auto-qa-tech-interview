@@ -125,6 +125,23 @@ function isTicketLucky(ticketNumber) {
     return headSum === tailSum;
 }
 
+function deleteDuplicatedSymbols(arr) {
+    let distinctSymbolsArr = [];
+    // for (let i = 0; i <= arr.length - 1; i++) {
+    //     if (!checkExistingSymbol(arr[i])) distinctSymbolsArr.push(arr[i]);
+    // }
+
+    arr.map((symbol) => {
+        if (!checkExistingSymbol(symbol)) distinctSymbolsArr.push(symbol);
+    });
+
+    function checkExistingSymbol(symbol) {
+        return distinctSymbolsArr.includes(symbol);
+    }
+
+    return distinctSymbolsArr;
+}
+
 //fizzbuzz1();
 //fizzbuzz2();
 //invert1();
@@ -133,6 +150,7 @@ function isTicketLucky(ticketNumber) {
 //nativeSort();
 //countDuplicatedSymbols('12q.323.q561'); // 5: 12q.3
 //console.log(isTicketLucky(123006));
+//console.log(deleteDuplicatedSymbols([1, 1, 2, 3, 3, 4]));
 
 /** impl calculator and tests */
 

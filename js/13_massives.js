@@ -6,6 +6,7 @@
  *    find/findIndex – для поиска в массиве.
  *    every/some – для проверки массива.
  *    reduce – для прохода по массиву с вычислением значения.
+ *    includes - содержится ли в массиве значение
  */
 
 let arr = [0, 1, 2];
@@ -55,7 +56,7 @@ arr.some((num) => num > 0); // true, есть хоть одно положите
 
 // includes - возвращает boolean, содержится ли поле в массиве
 const array = [1, 2, 3];
-array.includes(3) // true
+array.includes(3); // true
 
 /**
      reduce - берет массив и сжимает его содержимое в одно значение.
@@ -147,8 +148,7 @@ let wizardsWithPoints = wizards.reduce(function (arr, currentWizard) {
 
 // Объединение данных из двух источников в объект
 
-const wizardsAsAnObject = wizards.reduce(function(obj, wizard) {
-
+const wizardsAsAnObject = wizards.reduce(function (obj, wizard) {
     // Получаем значение ключа для объекта points, удалив пробелы из имени волшебника
     const key = wizard.name.replace(' ', '');
 
