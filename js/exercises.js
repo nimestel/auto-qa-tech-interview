@@ -4,7 +4,13 @@ function fizzbuzz1() {
     console.log('fizzbuzz 1:');
     for (let i = 0; i < 20; i++) {
         console.log(
-            !(i % 5) && !(i % 3) ? 'fizzbuzz' : !(i % 5) ? 'fizz' : !(i % 3) ? 'buzz' : `${i}`
+            !(i % 5) && !(i % 3)
+                ? 'fizzbuzz'
+                : !(i % 5)
+                ? 'fizz'
+                : !(i % 3)
+                ? 'buzz'
+                : `${i}`
         );
     }
 }
@@ -78,7 +84,8 @@ function countDuplicatedSymbols(str) {
     let duplicatedSymbols = [];
     for (let i = 0; i <= arr.length - 1; i++) {
         for (let j = i + 1; j <= arr.length; j++) {
-            if (arr[i] === arr[j] && !checkExistingSymbol(arr[i])) duplicatedSymbols.push(arr[i]);
+            if (arr[i] === arr[j] && !checkExistingSymbol(arr[i]))
+                duplicatedSymbols.push(arr[i]);
         }
     }
     console.log(duplicatedSymbols.length);
@@ -93,10 +100,9 @@ function isTicketLucky(ticketNumber) {
     ticketNumber = String(ticketNumber);
 
     if (ticketNumber.length !== 6) return false;
-    const numbers = ticketNumber.split('');
     const [head, tail] = [
-        [numbers[0], numbers[1], numbers[2]],
-        [numbers[3], numbers[4], numbers[5]],
+        ticketNumber.substr(0, 3).split(''),
+        ticketNumber.substr(3, 6).split(''),
     ];
 
     function summ(arr) {
@@ -148,7 +154,11 @@ class Calculator {
     }
     divide(num1, num2) {
         let checkArgInvalid = this.checkArgsInvalid(...arguments);
-        return checkArgInvalid ? checkArgInvalid : num2 === 0 ? ErrorMessages.isNull : num1 / num2;
+        return checkArgInvalid
+            ? checkArgInvalid
+            : num2 === 0
+            ? ErrorMessages.isNull
+            : num1 / num2;
     }
     multi(num1, num2) {
         function multiplication(args) {
