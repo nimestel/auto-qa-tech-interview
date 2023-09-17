@@ -56,6 +56,7 @@ arr.some((num) => num > 0); // true, есть хоть одно положите
 
 // includes - возвращает boolean, содержится ли поле в массиве
 const array = [1, 2, 3];
+
 array.includes(3); // true
 
 /**
