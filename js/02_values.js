@@ -20,6 +20,7 @@
  * - String: typeof instance === "string"
  * - BigInt: typeof instance === "bigint"
  * - Symbol: typeof instance === "symbol"
+ * - Null: typeof instance === "object" // bug, but wont be fixed
 */
 
 /** 
