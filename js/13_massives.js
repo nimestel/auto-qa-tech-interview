@@ -150,6 +150,7 @@ let wizardsWithPoints = wizards.reduce(function (arr, currentWizard) {
 // Объединение данных из двух источников в объект
 
 const wizardsAsAnObject = wizards.reduce(function (obj, wizard) {
+
     // Получаем значение ключа для объекта points, удалив пробелы из имени волшебника
     const key = wizard.name.replace(' ', '');
 

@@ -36,5 +36,5 @@ a?.b?.c	// undefined
 a.b	// undefined
 
 // не будет выполнено ничего, если значение undefined или null:
-const func = a?.b?.someFunc?.(data); 
+const func = a?.b?.someFunc?.(data);
 const smth = func(data);
