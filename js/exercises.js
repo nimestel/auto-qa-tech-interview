@@ -27,10 +27,9 @@ function fizzbuzz2() {
     }
 }
 
-function invert1() {
+function invert1(str = 'tinkoff') {
     console.log('invert string 1:');
-    let str = 'tinkoff';
-    let inverted = str.split('').reverse().join('');
+    let inverted = str.toString().split('').reverse().join('');
     console.log(inverted);
 }
 
@@ -211,6 +210,23 @@ function mergeSortedArrays(nums1, m, nums2, n) {
     nums1.sort((a, b) => a - b);
 }
 
+const digit = 12234566;
+function countNumbersInDigit(digit) {
+    console.log(digit.toString().length);
+}
+
+function isArraysContainSameElement(arr1, arr2) {
+    for (let el1 of arr1) {
+        for (let el2 of arr2) {
+            if (el1 === el2) return true;
+        }
+    }
+    return false;
+}
+
+//console.log(reverse('hahahaha'));
+//console.log(isArraysContainSameElement([0, 1, 2], [6, 2, 9]));
+//countNumbersInDigit(digit);
 //fizzbuzz1();
 //fizzbuzz2();
 //invert1();
@@ -364,6 +380,6 @@ function test(set, operation) {
 
 Object.keys(data).forEach((operation) => {
     data[operation].forEach((set) => {
-        test(set, operation);
+        //test(set, operation);
     });
 });
