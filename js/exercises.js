@@ -27,10 +27,9 @@ function fizzbuzz2() {
     }
 }
 
-function invert1() {
+function invert1(str = 'tinkoff') {
     console.log('invert string 1:');
-    let str = 'tinkoff';
-    let inverted = str.split('').reverse().join('');
+    let inverted = str.toString().split('').reverse().join('');
     console.log(inverted);
 }
 
@@ -142,6 +141,92 @@ function deleteDuplicatedSymbols(arr) {
     return distinctSymbolsArr;
 }
 
+let binaryTree = {
+    value: 42,
+    right: {
+        value: 1,
+        left: {
+            value: 2,
+            right: {
+                value: 3,
+            },
+            left: {
+                value: 4,
+            },
+        },
+    },
+    left: {
+        value: 5,
+        left: {
+            value: 6,
+        },
+    },
+};
+
+function recursiveSum(tree, sum = 0) {
+    console.log('Now add value %d', tree.value);
+
+    sum += tree.value;
+
+    console.log('Now sum is %d', sum);
+
+    if (tree.left) {
+        recursiveSum(tree.left, sum);
+    }
+
+    if (tree.right) {
+        recursiveSum(tree.right, sum);
+    }
+
+    return sum;
+}
+
+// function mergeSortedArrays(nums1, m, nums2, n) {
+//     // Высчитываем промежуток между проверяемыми элементами
+//     let gap = Math.floor(m / 2);
+//     // Пока разница между элементами есть
+//     while (gap >= 1) {
+//         for (let right = 0; right < n; right++) {
+//             // Смещаем правый указатель, пока не сможем найти такой, что
+//             // между ним и элементом до него не будет нужного промежутка
+//             for (let c = right - gap; c >= 0; c -= gap) {
+//                 if (nums1[c] > nums1[c + gap]) {
+//                     [nums1[c], nums1[c + gap]] = [nums1[c + gap], [nums1[c]]];
+//                 }
+//             }
+//         }
+//         // Пересчитываем разрыв
+//         gap = gap / 2;
+//     }
+// }
+
+function mergeSortedArrays(nums1, m, nums2, n) {
+    // Вставляем элементы nums2 в nums1
+    //nums1.splice(m, nums1.length - m, ...nums2);
+    for (let i = m; i < m + n; i++) {
+        nums1[i] = nums2[i - m];
+    }
+    // Сортируем nums1
+    nums1.sort((a, b) => a - b);
+}
+
+const digit = 12234566;
+function countNumbersInDigit(digit) {
+    console.log(digit.toString().length);
+}
+
+function isArraysContainSameElement(arr1, arr2) {
+    for (let el1 of arr1) {
+        for (let el2 of arr2) {
+            if (el1 === el2) return true;
+        }
+    }
+    return false;
+}
+
+//console.log(reverse('hahahaha'));
+//console.log(isArraysContainSameElement([0, 1, 2], [6, 2, 9]));
+//countNumbersInDigit(digit);
 //fizzbuzz1();
 //fizzbuzz2();
 //invert1();
@@ -151,6 +236,7 @@ function deleteDuplicatedSymbols(arr) {
 //countDuplicatedSymbols('12q.323.q561'); // 5: 12q.3
 //console.log(isTicketLucky(123006));
 //console.log(deleteDuplicatedSymbols([1, 1, 2, 3, 3, 4]));
+//console.log(recursiveSum(binaryTree));
 
 /** impl calculator and tests */
 
@@ -294,6 +380,6 @@ function test(set, operation) {
 
 Object.keys(data).forEach((operation) => {
     data[operation].forEach((set) => {
-        test(set, operation);
+        //test(set, operation);
     });
 });

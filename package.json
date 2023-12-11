@@ -5,7 +5,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["javascript", "typescript", "interview"],
+  "keywords": [
+    "javascript",
+    "typescript",
+    "interview"
+  ],
   "author": "nimestel",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "3.0.3"
+  }
 }
