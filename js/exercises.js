@@ -383,3 +383,13 @@ Object.keys(data).forEach((operation) => {
         //test(set, operation);
     });
 });
+
+function printNumbers(lastNum = 5) {
+    let currentLine = '';
+    for (let j = 1; j <= lastNum; j++) {
+        currentLine += j + ' ';
+        console.log(currentLine);
+    }
+}
+
+printNumbers();

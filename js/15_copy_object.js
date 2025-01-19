@@ -68,6 +68,17 @@ let newGirlWithSpread = { ...girl };
 // { name: 'Tanya', language: { speak: 'russian', code: 'JS' } }
 console.log('spread: ', newGirlWithSpread);
 
+/**
+ * Метод concat() массива
+ * */
+
+let e = [1, 2, 3];
+let f = e.concat(); // возвращает независимую копию объекта
+e.push(4);
+
+console.log('e', e); // c [ 1, 2, 3, 4 ]
+console.log('f', f); // d [ 1, 2, 3]
+
 // Отличие глубокой и не глубокой копии:
 
 console.log('меняем ссылочное свойство!');
