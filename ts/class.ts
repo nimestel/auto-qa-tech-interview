@@ -16,7 +16,10 @@ class Person {
     protected readonly name: string;
     protected readonly age: number;
 
-    constructor(name: string, age: number) {
+    constructor(
+        protected readonly name: string,
+        protected readonly age: number
+    ) {
         this.name = name;
         this.age = age;
     }
